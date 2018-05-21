@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent_scroll_view"
+    tools:context="an.bill_using_barcode.BillingHome">
+
+    <LinearLayout
+        android:id="@+id/parent_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/barcode_result"
+                android:text="bar code will appear here"
+                android:layout_weight="4"/>
+
+            <Button
+                android:id="@+id/scan_barcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="addToBill"
+                android:text="add to bill"
+                android:textSize="6dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/add_field_button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#555"
+            android:onClick="onAddField"
+            android:paddingLeft="5dp"
+            android:text="scan barcode"
+            android:textColor="#FFF" />
+
+
+    </LinearLayout>
+
+</ScrollView>
